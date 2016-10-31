@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    color: white;
+    font-family:helvetica;
+}
+
+.header {
+    display:inline-block;
+    font-size:300%;
+    margin-left: 20px;
+}
+
+.timeparagraph > * {
+    display:inline-block;
+    font-size:300%;
+    margin-left: 20px;
+
+}
