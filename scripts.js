@@ -36,7 +36,7 @@ function getWeather() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var json = JSON.parse(this.responseText)
-      var weatherString = kToF(json.main.temp, 1) + '&#x2109' + json.weather[0].description;
+      var weatherString = kToF(json.main.temp, 1) + '&#x2109, ' + json.weather[0].description;
       var weatherExtra = 'low: ' + kToF(json.main.temp_min, 0) + ' high: ' + kToF(json.main.temp_max, 0);
       document.getElementById('weather').innerHTML = weatherString;
       document.getElementById('weatherExtra').innerHTML = weatherExtra;
