@@ -1,18 +1,15 @@
 body {
     background-color: black;
     color: white;
-    font-family:helvetica;
+    font-family:helvetica, sans-serif;
 }
 
 .header {
-    display:inline-block;
+    /*display:inline-block;*/
     font-size:300%;
     margin-left: 20px;
 }
 
-.timeparagraph > * {
-    display:inline-block;
-    font-size:300%;
-    margin-left: 20px;
-
+.sub {
+  font-size:150%;
 }

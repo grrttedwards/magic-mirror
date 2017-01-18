@@ -1,55 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="styles.css">
-
-<script type="text/javascript">
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById("time").innerHTML =
-    h + ":" + m + ":" + s;
-    var t = setTimeout(startTime, 500);
-    
-    var curHr = today.getHours();
-    var hello = "good ";
-    var name = ", name";
-    if (curHr < 12) {
-        document.getElementById("greeting").innerHTML =
-        hello + "morning" + name;
-    } else if (curHr < 18) {
-        document.getElementById("greeting").innerHTML = 
-        hello + "afternoon" + name;
-    } else {
-        document.getElementById("greeting").innerHTML = 
-        hello + "night" + name;
-    }
-}
-function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-}
-
-</script>
-
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="scripts.js"></script>
 </head>
-<body  onload="startTime()">
 
-<div class="header">
-<p id="greeting"></p>
-</div>
-
-<div class="timeparagraph">
-<p>the time is</p>
-<p id="time"></p>
-</div>
-
-<div id="weather"></div>
-
+<body  onload="startTime(); getWeather()">
+  <div class="header" id="greeting">Good %, Name</div>
+  <div class="header" id="time"></div>
+  <div class="header" id="weather"></div>
+  <div class="header sub" id="weatherExtra"></div>
 </body>
 </html>
 
