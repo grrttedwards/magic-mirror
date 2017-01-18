@@ -35,13 +35,13 @@ function getWeather() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      var json = JSON.parse(this)
+      var json = JSON.parse(this.responseText)
       var weatherString = kToF(json.main.temp, 1) + '&#x2109' + json.weather[0].description;
       var weatherExtra = 'low: ' + kToF(json.main.temp_min, 0) + ' high: ' + kToF(json.main.temp_max, 0);
       document.getElementById('weather').innerHTML = weatherString;
       document.getElementById('weatherExtra').innerHTML = weatherExtra;
     }
   };
-  xhttp.open('GET', 'http://api.openweathermap.org/data/2.5/weather?zip=02375,us&APPID=', true);
+  xhttp.open('GET', 'http://api.openweathermap.org/data/2.5/weather?zip=02375,us&APPID=bc1a96c0959ab8e3001c880d867de711', true);
   xhttp.send();
 }
