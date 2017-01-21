@@ -40,8 +40,10 @@ function getWeather() {
       var weatherExtra = 'low: ' + kToF(json.main.temp_min, 0) + ' high: ' + kToF(json.main.temp_max, 0);
       document.getElementById('weather').innerHTML = weatherString;
       document.getElementById('weatherExtra').innerHTML = weatherExtra;
+    } else {
+      document.getElementById('weather').innerHTML = "ERR: CHECK CONSOLE";
     }
   };
-  xhttp.open('GET', 'http://api.openweathermap.org/data/2.5/weather?zip=02375,us&APPID=01d687619250b5c27e1b2655b7df3893', true);
+  xhttp.open('GET', 'http://api.openweathermap.org/data/2.5/weather?zip=02375,us&APPID=', true);
   xhttp.send();
 }
