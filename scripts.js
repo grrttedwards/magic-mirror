@@ -42,6 +42,6 @@ function getWeather() {
       document.getElementById('weatherExtra').innerHTML = weatherExtra;
     }
   };
-  xhttp.open('GET', 'http://api.openweathermap.org/data/2.5/weather?zip=02375,us&APPID=', true);
+  xhttp.open('GET', 'http://api.openweathermap.org/data/2.5/weather?zip=02375,us&APPID=01d687619250b5c27e1b2655b7df3893', true);
   xhttp.send();
 }
